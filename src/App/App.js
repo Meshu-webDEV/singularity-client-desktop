@@ -80,7 +80,7 @@ const App = () => {
         onClick={() => window.scrollTo(0, 0)}
         className={`${
           showArrow ? "opacity-100" : "opacity-0"
-        } fixed bottom-6 right-3 text-whites-light bg-primary-light filter p-1.5 rounded-full flex justify-center items-center z-999 hover:shadow-lg hover:brightness-150 cursor-pointer`}
+        } fixed bottom-6 right-3 text-whites-light bg-dark-backgroundDarker filter p-1.5 rounded-full flex justify-center items-center z-999 hover:shadow-lg hover:brightness-150 cursor-pointer`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
