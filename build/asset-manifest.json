@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9fe00aec.chunk.css",
+    "main.js": "/static/js/main.7a65ffd8.chunk.js",
+    "main.js.map": "/static/js/main.7a65ffd8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b76c4e4c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b76c4e4c.js.map",
+    "static/css/2.cd76a518.chunk.css": "/static/css/2.cd76a518.chunk.css",
+    "static/js/2.d92e2e5d.chunk.js": "/static/js/2.d92e2e5d.chunk.js",
+    "static/js/2.d92e2e5d.chunk.js.map": "/static/js/2.d92e2e5d.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.cd76a518.chunk.css.map": "/static/css/2.cd76a518.chunk.css.map",
+    "static/css/main.9fe00aec.chunk.css.map": "/static/css/main.9fe00aec.chunk.css.map",
+    "static/js/2.d92e2e5d.chunk.js.LICENSE.txt": "/static/js/2.d92e2e5d.chunk.js.LICENSE.txt",
+    "static/media/discord-event-started.93ef7cce.png": "/static/media/discord-event-started.93ef7cce.png",
+    "static/media/free-feature-bg.e36dcfc3.svg": "/static/media/free-feature-bg.e36dcfc3.svg",
+    "static/media/new-event-points.54906015.png": "/static/media/new-event-points.54906015.png",
+    "static/media/new-event-prizepool.1e998f41.png": "/static/media/new-event-prizepool.1e998f41.png",
+    "static/media/new-event-teams.3251374e.png": "/static/media/new-event-teams.3251374e.png",
+    "static/media/nightbot-1.e3c4d91a.png": "/static/media/nightbot-1.e3c4d91a.png",
+    "static/media/nightbot-fading.c6ca33b9.png": "/static/media/nightbot-fading.c6ca33b9.png",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf",
+    "static/media/templates-new.8cd6e6c6.png": "/static/media/templates-new.8cd6e6c6.png",
+    "static/media/templates-repo.9dcef839.png": "/static/media/templates-repo.9dcef839.png",
+    "static/media/templates-view.13f2844f.png": "/static/media/templates-view.13f2844f.png",
+    "static/media/webhooks-1.74f7f5d2.png": "/static/media/webhooks-1.74f7f5d2.png",
+    "static/media/webhooks-2.a5d78421.png": "/static/media/webhooks-2.a5d78421.png",
+    "static/media/webhooks-3.e5ab759e.png": "/static/media/webhooks-3.e5ab759e.png",
+    "static/media/webhooks-4.5fe28368.png": "/static/media/webhooks-4.5fe28368.png",
+    "static/media/webhooks-5.17413e0a.png": "/static/media/webhooks-5.17413e0a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b76c4e4c.js",
+    "static/css/2.cd76a518.chunk.css",
+    "static/js/2.d92e2e5d.chunk.js",
+    "static/css/main.9fe00aec.chunk.css",
+    "static/js/main.7a65ffd8.chunk.js"
+  ]
+}
