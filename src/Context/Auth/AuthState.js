@@ -126,7 +126,7 @@ const AuthState = (props) => {
         const { data } = await backendAPI.post(
           `${
             process.env.NODE_ENV === "production"
-              ? `${process.env.REACT_APP_BACKEND}/v1/user/authenticate/local/signin`
+              ? `${process.env.REACT_APP_BACKEND}/v1/authenticate/local/signin`
               : "/authenticate/local/signin"
           }`,
           user
