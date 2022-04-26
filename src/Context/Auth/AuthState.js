@@ -1,5 +1,5 @@
-import { useContext, useReducer } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useContext, useReducer } from "react";
+import { useHistory, useLocation } from "react-router";
 
 // Context
 import {
@@ -10,20 +10,20 @@ import {
   SET_LOCAL_LOADING,
   SET_TWITCH_LOADING,
   SET_GOOGLE_LOADING,
-} from './../types';
-import AuthContext from './AuthContext';
-import AuthReducer from './AuthReducer';
-import ToastContext from '../../Context/Toast/ToastContext';
+} from "./../types";
+import AuthContext from "./AuthContext";
+import AuthReducer from "./AuthReducer";
+import ToastContext from "../../Context/Toast/ToastContext";
 
 // Utils
-import { backendAPI } from '../../lib/backend';
+import { backendAPI } from "../../lib/backend";
 
-const AuthState = props => {
+const AuthState = (props) => {
   const initialState = {
-    id: '',
-    username: '',
-    displayName: '',
-    email: '',
+    id: "",
+    username: "",
+    displayName: "",
+    email: "",
     isAuthenticating: true,
     authState: false,
     loading: false,
@@ -79,7 +79,7 @@ const AuthState = props => {
     });
   };
 
-  const LocalSignup = user => {
+  const LocalSignup = (user) => {
     if (isCurrentlyTryingToAuthenticate()) return;
 
     dispatch({ type: SET_LOCAL_LOADING, payload: true });
@@ -88,25 +88,25 @@ const AuthState = props => {
       try {
         const { data } = await backendAPI.post(
           `${
-            process.env.NODE_ENV === 'production'
-              ? process.env.REACT_APP_BACKEND
-              : '/authenticate/local/signup'
+            process.env.NODE_ENV === "production"
+              ? `${process.env.REACT_APP_BACKEND}/v1/authenticate/local/signup`
+              : "/authenticate/local/signup"
           }`,
           user
         );
 
         setToast({
-          variant: 'success',
+          variant: "success",
           message:
-            'Successfully signed-up!. Verify your Email to activate your account',
+            "Successfully signed-up!. Verify your Email to activate your account",
         });
         history.replace(`/activate-email?username=${data.username}`);
       } catch (error) {
         setToast({
-          variant: 'error',
+          variant: "error",
           message: error.response
             ? error.response.data.message
-            : 'Apologies, Error occurred while trying to process your request. try again or contact us.',
+            : "Apologies, Error occurred while trying to process your request. try again or contact us.",
         });
         dispatch({ type: SET_LOCAL_LOADING, payload: false });
         reject();
@@ -116,7 +116,7 @@ const AuthState = props => {
     });
   };
 
-  const LocalSignin = user => {
+  const LocalSignin = (user) => {
     if (isCurrentlyTryingToAuthenticate()) return;
 
     dispatch({ type: SET_LOCAL_LOADING, payload: true });
@@ -125,20 +125,20 @@ const AuthState = props => {
       try {
         const { data } = await backendAPI.post(
           `${
-            process.env.NODE_ENV === 'production'
-              ? process.env.REACT_APP_BACKEND
-              : '/authenticate/local/signin'
+            process.env.NODE_ENV === "production"
+              ? `${process.env.REACT_APP_BACKEND}/v1/user/authenticate/local/signin`
+              : "/authenticate/local/signin"
           }`,
           user
         );
         await isAuthorized();
-        history.replace('/dashboard');
+        history.replace("/dashboard");
       } catch (error) {
         setToast({
-          variant: 'error',
+          variant: "error",
           message: error.response
             ? error.response.data.message
-            : 'Apologies, Error occurred while trying to process your request. try again or contact us.',
+            : "Apologies, Error occurred while trying to process your request. try again or contact us.",
           duration: 9000,
         });
         dispatch({ type: SET_LOCAL_LOADING, payload: false });
@@ -147,7 +147,7 @@ const AuthState = props => {
     });
   };
 
-  const GoogleSignup = async user => {
+  const GoogleSignup = async (user) => {
     if (isCurrentlyTryingToAuthenticate()) return;
 
     dispatch({
@@ -156,15 +156,15 @@ const AuthState = props => {
     });
     window.open(
       `${
-        process.env.NODE_ENV === 'production'
+        process.env.NODE_ENV === "production"
           ? `${backendAPI.defaults.baseURL}/authenticate/google`
-          : 'http://localhost:6060/v1/authenticate/google'
+          : "http://localhost:6060/v1/authenticate/google"
       }`,
-      '_self'
+      "_self"
     );
   };
 
-  const TwitchSignup = async user => {
+  const TwitchSignup = async (user) => {
     if (isCurrentlyTryingToAuthenticate()) return;
 
     dispatch({
@@ -174,11 +174,11 @@ const AuthState = props => {
 
     window.open(
       `${
-        process.env.NODE_ENV === 'production'
+        process.env.NODE_ENV === "production"
           ? `${backendAPI.defaults.baseURL}/authenticate/twitch`
-          : 'http://localhost:6060/v1/authenticate/twitch'
+          : "http://localhost:6060/v1/authenticate/twitch"
       }`,
-      '_self'
+      "_self"
     );
   };
 
@@ -188,8 +188,8 @@ const AuthState = props => {
         type: SIGNOUT,
         payload: initialState,
       });
-      await backendAPI.get('/authenticate/signout');
-      history.replace('/');
+      await backendAPI.get("/authenticate/signout");
+      history.replace("/");
     } catch (error) {
       console.log(error);
     } finally {
@@ -203,20 +203,20 @@ const AuthState = props => {
   const resetPassword = ({ email }) => {
     return new Promise(async (resolve, reject) => {
       try {
-        await backendAPI.patch('/user/reset-password', { email });
+        await backendAPI.patch("/user/reset-password", { email });
         setToast({
-          variant: 'success',
+          variant: "success",
           message:
-            'Successfully reset account password. Check your Email and follow the instructions from there.',
+            "Successfully reset account password. Check your Email and follow the instructions from there.",
           duration: 8000,
         });
         return resolve();
       } catch (error) {
         setToast({
-          variant: 'error',
+          variant: "error",
           message: error.response
             ? error.response.data.message
-            : 'Apologies, Error occurred while trying to process your request. try again or contact us.',
+            : "Apologies, Error occurred while trying to process your request. try again or contact us.",
           duration: 8000,
         });
         return reject();
@@ -224,7 +224,7 @@ const AuthState = props => {
     });
   };
 
-  const passwordSuccessfullyChanged = value => {
+  const passwordSuccessfullyChanged = (value) => {
     dispatch({
       type: SIGNOUT,
       payload: initialState,
