@@ -27,6 +27,8 @@ module.exports = {
       /scale-$/,
       /space-$/,
       /rounded-$/,
+      /rounded-tr-3xl$/,
+      /rounded-b-3xl$/,
     ],
     standard: [
       /rounded$/,
@@ -42,6 +44,8 @@ module.exports = {
       /scale-$/,
       /space-$/,
       /rounded-$/,
+      /rounded-tr-3xl$/,
+      /rounded-b-3xl$/,
     ],
     deep: [
       /rounded$/,
@@ -57,6 +61,8 @@ module.exports = {
       /scale-$/,
       /space-$/,
       /rounded-$/,
+      /rounded-tr-3xl$/,
+      /rounded-b-3xl$/,
     ],
   },
   darkMode: "class", // or 'media' or 'class'
