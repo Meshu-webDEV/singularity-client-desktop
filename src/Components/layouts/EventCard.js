@@ -205,7 +205,7 @@ const DashboardCardView = ({
           className="filter hover:brightness-110 hover:shadow-xl"
         >
           <div
-            className={`indicator-ongoing px-4 w-74 py-6 relative shadow-md flex items-start flex-col flex-shrink-0 rounded-tr-${rounded} rounded-b-${rounded} bg-gradient-to-br bg-grays-light 2xl:w-80`}
+            className={`indicator-ongoing px-4 w-74 py-6 relative shadow-md flex items-start flex-col flex-shrink-0 rounded-tr-${rounded} rounded-b-${rounded} bg-gradient-to-br bg-grays-light 2xl:w-119`}
           >
             <div className="w-full flex justify-between">
               <span className="items-center text-xs font-medium flex space-x-1  text-success tracking-tighter">
@@ -268,7 +268,7 @@ const DashboardCardView = ({
           className="filter hover:brightness-110 hover:shadow-xl"
         >
           <div
-            className={`indicator-upcoming px-4 w-74 py-6 border-whites-light border-opacity-40 relative shadow-md flex items-start flex-col flex-shrink-0 bg-gradient-to-br rounded-tr-${rounded} rounded-b-${rounded} bg-blacks-lighter 2xl:w-80`}
+            className={`indicator-upcoming px-4 w-74 py-6 border-whites-light border-opacity-40 relative shadow-md flex items-start flex-col flex-shrink-0 bg-gradient-to-br rounded-tr-${rounded} rounded-b-${rounded} bg-blacks-lighter 2xl:w-119`}
           >
             <div className="w-full flex justify-between">
               <span className="items-center text-2xs font-normal flex space-x-1  text-whites-dark opacity-80 tracking-tight">
@@ -334,7 +334,7 @@ const DashboardCardView = ({
           className="filter hover:brightness-110 hover:shadow-xl"
         >
           <div
-            className={`indicator-completed px-4 w-74 py-6 border-whites-dark relative shadow-md flex items-start flex-col flex-shrink-0 bg-gradient-to-br rounded-tr-${rounded} rounded-b-${rounded} bg-blacks-lighter opacity-70 2xl:w-80`}
+            className={`indicator-completed px-4 w-74 py-6 border-whites-dark relative shadow-md flex items-start flex-col flex-shrink-0 bg-gradient-to-br rounded-tr-${rounded} rounded-b-${rounded} bg-blacks-lighter opacity-70 2xl:w-119`}
           >
             <div className="w-full flex justify-between">
               <span className="items-center text-2xs font-normal flex space-x-1  text-whites-dark opacity-80 tracking-tighter">
