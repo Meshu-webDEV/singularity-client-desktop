@@ -5,6 +5,7 @@ module.exports = {
     "./src/**/*.js",
     "./public/index.html",
     "./src/Components/**/*.js",
+    "./src/Components/layouts/*.js",
     "./src/Global/*.js",
     "./src/Images/*.js",
   ],
