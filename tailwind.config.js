@@ -12,6 +12,23 @@ module.exports = {
     "./src/App/*.js",
     "./src/Images/*.js",
   ],
+  safelist: {
+    greedy: [
+      /rounded$/,
+      /z-$/,
+      /shadow$/,
+      /text$/,
+      /animate$/,
+      /h-$/,
+      /w-$/,
+      /max-w-$/,
+      /max-h-$/,
+      /translate-$/,
+      /scale-$/,
+      /space-$/,
+      /rounded-$/,
+    ],
+  },
   darkMode: "class", // or 'media' or 'class'
   theme: {
     colors: {

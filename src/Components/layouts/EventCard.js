@@ -12,7 +12,7 @@ import { ORG_APPLICATION_STATUS } from "../../lib/constants";
 const EventCard = ({
   placeholder = false,
   view = "dashboard",
-  rounded = "lg",
+  rounded = "3xl",
   uniqueid,
   name,
   datetime,
