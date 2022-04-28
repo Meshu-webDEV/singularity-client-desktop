@@ -499,10 +499,17 @@ const NewChannel = ({
       </div>
 
       <div className="flex flex-col space-y-2">
-        <FastInput name="server" label="Server name" type="text" size="large" />
+        <FastInput
+          name="server"
+          label="Server name"
+          secondaryLabel="Any name you like"
+          type="text"
+          size="large"
+        />
         <FastInput
           name="channel"
           label="Channel name"
+          secondaryLabel="Any name you like"
           type="text"
           size="large"
         />
