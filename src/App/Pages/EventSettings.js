@@ -1304,12 +1304,14 @@ const DiscordSettings = ({ updateEvent, setEvent, setToast }) => {
         subtitle="20 channels max"
         primaryAction={
           !values.owner.owner_webhooks.length ? (
-            <Button
-              disabled
-              text="Link channels to account first"
-              variant="dark"
-              className="py-1.5 px-2.5 opacity-40 text-whites-light"
-            />
+            <div className="text-whites-light">
+              <Button
+                disabled
+                text="Link channels to account first"
+                variant="dark"
+                className="py-1.5 px-2.5 opacity-40"
+              />
+            </div>
           ) : (
             <Button
               onClick={handleClickUpdateAdd}
