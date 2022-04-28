@@ -1303,14 +1303,23 @@ const DiscordSettings = ({ updateEvent, setEvent, setToast }) => {
         title="Add channels to notify"
         subtitle="20 channels max"
         primaryAction={
-          <Button
-            onClick={handleClickUpdateAdd}
-            text={`Add ${
-              selectedAccountChs.length ? selectedAccountChs.length : ""
-            } channels`}
-            variant="success"
-            className="py-1 px-2.5"
-          />
+          !values.owner.owner_webhooks.length ? (
+            <Button
+              disabled
+              text="Link channels to account first"
+              variant="dark"
+              className="py-1 px-2.5 opacity-40"
+            />
+          ) : (
+            <Button
+              onClick={handleClickUpdateAdd}
+              text={`Add ${
+                selectedAccountChs.length ? selectedAccountChs.length : ""
+              } channels`}
+              variant="success"
+              className="py-1 px-2.5"
+            />
+          )
         }
         secondaryAction={
           <Button

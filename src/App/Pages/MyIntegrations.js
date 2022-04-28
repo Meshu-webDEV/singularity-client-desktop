@@ -1289,7 +1289,7 @@ const HowDiscordWorksModal = () => {
               </span>
             </div>
             <p className="text-xs text-whites-dark">
-              It works good to instantly update your participants. It could also
+              Suitable for instantly updating your participants. It could also
               be used to update your team
               <span className="font-sans px-0.5">/</span>moderators or even your
               viewers... the possibilities are endless.

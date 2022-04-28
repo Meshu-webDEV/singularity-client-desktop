@@ -178,10 +178,10 @@ const RootProfile = ({
                         info={
                           <span>
                             What others see. Must be the same as your username.{" "}
-                            <br />
-                            Can be single dash
-                            <span className="font-sans"> ( - )</span> and space
-                            separated or character capitalized.
+                            <br />- Can be separated with a single dash
+                            <span className="font-sans"> ( - )</span>
+                            <br />- Can be separated with a single space
+                            <br />- Can be capitalized.
                           </span>
                         }
                       />
@@ -494,10 +494,11 @@ const EditDisplayName = ({ profile, editDisplay }) => {
             <InfoPopover
               info={
                 <span>
-                  What others see. Must be the same as your username. <br /> Can
-                  be dash
-                  <span className="font-sans"> ( - )</span> and space separated
-                  or character capitalized.
+                  What others see. Must be the same as your username. <br />-
+                  Can be separated with a single dash
+                  <span className="font-sans"> ( - )</span>
+                  <br />- Can be separated with a single space
+                  <br />- Can be capitalized.
                 </span>
               }
             />
