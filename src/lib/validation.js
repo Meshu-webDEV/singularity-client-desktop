@@ -121,9 +121,13 @@ export const displayNameSchema = Yup.string()
     (v, ctx) => {
       if (!v) return false;
       if (!v.toString().match(/^[a-z A-Z]+(-[a-z A-Z]+)?$/)) return false;
-      console.log(ctx.parent);
+
       return (
-        normalize(ctx.parent.username) === normalize(v.replace(/-| /g, ""))
+        normalize(
+          ctx.parent.altered
+            ? ctx.parent.username.slice(0, -5)
+            : ctx.parent.username
+        ) === normalize(v.replace(/-| /g, ""))
       );
     }
   )

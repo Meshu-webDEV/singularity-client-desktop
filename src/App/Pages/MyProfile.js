@@ -86,6 +86,7 @@ const MyProfile = () => {
             username: profile.username,
             email: profile.email,
             displayName: profile.displayName,
+            altered: profile.altered,
           }}
         >
           <EditDisplayName profile={profile} editDisplay={editDisplayName} />
