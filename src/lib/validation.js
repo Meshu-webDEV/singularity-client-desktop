@@ -121,7 +121,14 @@ export const displayNameSchema = Yup.string()
     (v, ctx) => {
       if (!v) return false;
       if (!v.toString().match(/^[a-z A-Z]+(-[a-z A-Z]+)?$/)) return false;
-
+      console.log("Parent");
+      console.log(ctx.parent);
+      console.log("Parent.Altered");
+      console.log(ctx.parent.altered);
+      console.log("Username Sliced");
+      console.log(ctx.parent.username.slice(0, -5));
+      console.log("v");
+      console.log(v);
       return (
         normalize(
           ctx.parent.altered
