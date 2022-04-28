@@ -1308,7 +1308,7 @@ const DiscordSettings = ({ updateEvent, setEvent, setToast }) => {
               disabled
               text="Link channels to account first"
               variant="dark"
-              className="py-1 px-2.5 opacity-40"
+              className="py-1.5 px-2.5 opacity-40 text-whites-light"
             />
           ) : (
             <Button
