@@ -22,13 +22,23 @@ import ButtonLink from "../../Components/actions/ButtonLink";
 import { ReactComponent as FreeBackground } from "../../Images/free-feature-bg.svg";
 import nightbot from "../../Images/nightbot-fading.png";
 
+import HandyZero from "../../Images/screenshots/new-event-basic-info.png";
 import HandyOne from "../../Images/screenshots/new-event-teams.png";
 import HandyTwo from "../../Images/screenshots/new-event-points.png";
 import HandyThree from "../../Images/screenshots/new-event-prizepool.png";
+import HandyFour from "../../Images/screenshots/event-toolbar.png";
+import HandyFive from "../../Images/screenshots/event-update-end-round.png";
 
 import ConvenientOne from "../../Images/screenshots/templates-new.png";
 import ConvenientTwo from "../../Images/screenshots/templates-view.png";
 import ConvenientThree from "../../Images/screenshots/templates-repo.png";
+
+import ReachingNightbotZero from "../../Images/screenshots/nightbot-setting.png";
+import ReachingNightbotOne from "../../Images/screenshots/nightbot-twitch-addcom.png";
+import ReachingNightbotTwo from "../../Images/screenshots/nightbot-twitch-upcoming.png";
+import ReachingNightbotThree from "../../Images/screenshots/nightbot-twitch-ongoing.png";
+import ReachingNightbotFour from "../../Images/screenshots/nightbot-twitch-ongoing-1.png";
+import ReachingNightbotFive from "../../Images/screenshots/nightbot-twitch-ongoing-2.png";
 
 import DiscordOne from "../../Images/screenshots/discord-event-started.png";
 
@@ -1101,7 +1111,14 @@ const Home = () => {
                   "Singularity comes in with a handful of internal tools that makes event organizing and management a piece of cake. All in one place.",
                   "Say good-bye to Google Sheets, No more!",
                 ],
-                images: [HandyThree, HandyTwo, HandyOne],
+                images: [
+                  HandyZero,
+                  HandyThree,
+                  HandyTwo,
+                  HandyOne,
+                  HandyFour,
+                  HandyFive,
+                ],
               }}
             />
             <FeatureLayout
@@ -1132,7 +1149,13 @@ const Home = () => {
                 description: [
                   "Singularity integrates with Nightbot for Twitch chat where your viewers can automatically get the event's LATEST scores. No more editing your command manually after each round!",
                 ],
-                images: [ConvenientTwo, ConvenientThree, ConvenientOne],
+                images: [
+                  ReachingNightbotZero,
+                  ReachingNightbotOne,
+                  ReachingNightbotTwo,
+                  ReachingNightbotFour,
+                  ReachingNightbotFive,
+                ],
                 images_padding: "mb-28",
               }}
             />
@@ -1200,7 +1223,7 @@ const Home = () => {
             <FreeBackground />
           </div>
         </section>
-        <section className="stats text-whites-light">
+        {/* <section className="stats text-whites-light">
           <div className="relative text-6xl font-bold uppercase -mb-2 3xl:px-56">
             <div className="sticky z-999">Stats & Numbers</div>
             <div className="absolute z-10 top-2 w-14 h-10 bg-primary-dark" />
@@ -1231,7 +1254,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <hr className="self-center w-3/4 text-whites-dark opacity-5 bg-dark-backgroundDark" />
         <section className="contact text-whites-light bg-dark-backgroundDark flex flex-col justify-center items-center space-y-3 px-28 py-56 3xl:px-56">
           <div className="">Want to get in touch?</div>
