@@ -38,6 +38,7 @@ import FormikTemplatesFilterContext from "../Context/Formik/FormikTemplatesFilte
 import ProfileState from "../Context/Profile/ProfileState";
 import BreadcrumbsState from "../Context/Breadcrumbs/BreadcrumbsState";
 import { useWindowSize, useWindowScroll } from "react-use";
+import { isMobile } from "react-device-detect";
 
 const App = () => {
   //
@@ -50,6 +51,11 @@ const App = () => {
   const clientViewPort = useMemo(() => windowSize.height / 2, []);
 
   const { authState, isAuthorized, isAuthenticating } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (isMobile)
+      return window.location.replace(process.env.REACT_APP_MOBILE_CLIENT);
+  }, []);
 
   useEffect(() => {
     const _isAuthorized = async () => {

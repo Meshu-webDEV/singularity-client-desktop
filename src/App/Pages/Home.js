@@ -1138,16 +1138,12 @@ const Home = () => {
             <FeatureLayout
               dir="rtl"
               feature={{
-                title: "Reaching",
-                secondaryTitle: (
-                  <div className="flex justify-center items-center space-x-2">
-                    <span>With Nightbot</span>
-                    <Nightbot className="filter brightness-90 mb-1" />
-                  </div>
-                ),
-                sub: "x1",
+                title: "On demand",
+                secondaryTitle: "",
+                sub: "",
                 description: [
-                  "Singularity integrates with Nightbot for Twitch chat where your viewers can automatically get the event's LATEST scores. No more editing your command manually after each round!",
+                  "Without leaving your stream, viewers can get the event updates on-demand. Singularity integrates with Nightbot for Twitch chat. Where your viewers can automatically get the event's LATEST scores.",
+                  "No more editing your command manually after each round!",
                 ],
                 images: [
                   ReachingNightbotZero,
@@ -1163,16 +1159,11 @@ const Home = () => {
               dir="ltr"
               feature={{
                 title: "Reaching",
-                secondaryTitle: (
-                  <div className="flex justify-center items-center space-x-2">
-                    <span>With Discord</span>
-                    <Discord className="w-5 h-5" />
-                  </div>
-                ),
-                sub: "x2",
+                secondaryTitle: "",
+                sub: "",
                 description: [
-                  "Singularity also integrates with Discord through webhooks. Our awesome and very-human Galactico will notify channels on event start, progression or end.",
-                  "Great for updating your participants quickly. Its also so easy to setup, don't worry!",
+                  "Singularity integrates with Discord through webhooks. Our awesome and very-human Galactico will notify channels on event start, progression or end. Great for updating your participants quickly.",
+                  "Four easy-steps setup!",
                 ],
                 images: [DiscordOne],
                 images_padding: "mb-28",
