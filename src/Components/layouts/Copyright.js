@@ -1,3 +1,4 @@
+import ButtonLink from "../actions/ButtonLink";
 import MobileLogo from "./MobileLogo";
 
 const Copyright = ({ withLogo = false, color = "primary" }) => {
@@ -20,11 +21,25 @@ const Copyright = ({ withLogo = false, color = "primary" }) => {
           </span>{" "}
           - All rights reserved
         </span>
+        <div className="flex space-x-12 pt-2">
+          <ButtonLink
+            text="Privacy Policy"
+            href="/privacy-policy"
+            className="privacy text-whites-dark text-xs"
+            textOnly
+          />
+          <ButtonLink
+            text="Terms & Conditions"
+            href="/terms-conditions"
+            className="privacy text-whites-dark text-xs"
+            textOnly
+          />
+        </div>
       </div>
     );
 
   return (
-    <div className="absolute bottom-0.5 w-full py-8 flex flex-col justify-center text-whites-dark font-light text-2xs tracking-wider">
+    <div className="w-full py-8 bg-dark-backgroundDark flex flex-col justify-center items-center text-whites-dark font-light text-2xs tracking-tight">
       <span>
         Copyright © 2022 -{" "}
         <span>
@@ -38,6 +53,20 @@ const Copyright = ({ withLogo = false, color = "primary" }) => {
         </span>{" "}
         - All rights reserved
       </span>
+      <div className="flex space-x-12 pt-2">
+        <ButtonLink
+          text="Privacy Policy"
+          href="/privacy-policy"
+          className="privacy text-whites-dark text-xs"
+          textOnly
+        />
+        <ButtonLink
+          text="Terms & Conditions"
+          href="/terms-conditions"
+          className="privacy text-whites-dark text-xs"
+          textOnly
+        />
+      </div>
     </div>
   );
 };

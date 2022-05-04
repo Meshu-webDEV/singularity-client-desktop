@@ -7,6 +7,7 @@ import Join from "./Pages/Join";
 import Dashboard from "./Pages/Dashboard";
 import Events from "./Pages/Events";
 import NotFound from "./Pages/NotFound";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TransitionalLoading from "./Pages/TransitionalLoading";
 import Event from "./Pages/Event";
 import Templates from "./Pages/Templates";
@@ -39,6 +40,7 @@ import ProfileState from "../Context/Profile/ProfileState";
 import BreadcrumbsState from "../Context/Breadcrumbs/BreadcrumbsState";
 import { useWindowSize, useWindowScroll } from "react-use";
 import { isMobile } from "react-device-detect";
+import TermsConditions from "./Pages/TermsConditions";
 
 const App = () => {
   //
@@ -164,6 +166,16 @@ const App = () => {
             <OrganizationState>
               <Organization />
             </OrganizationState>
+          </EventsState>
+        </Route>
+        <Route path="/privacy-policy">
+          <EventsState>
+            <PrivacyPolicy />
+          </EventsState>
+        </Route>
+        <Route path="/terms-conditions">
+          <EventsState>
+            <TermsConditions />
           </EventsState>
         </Route>
         <Route path="/404">

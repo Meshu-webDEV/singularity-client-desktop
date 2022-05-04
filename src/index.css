@@ -379,6 +379,10 @@ color: white !important;
 opacity: 35% !important;
 }
 
+.blink-2 {
+  -webkit-animation: blink-2 0.9s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite both;
+  animation: blink-2 0.9s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite both;
+}
 
 .shake-horizontal {
   -webkit-animation: shake-horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) 5s both;
@@ -417,6 +421,34 @@ opacity: 35% !important;
 .rect-right-float {
   -webkit-animation: rect-right-float 1.25s ease-in-out 0.4s infinite alternate both;
   animation: rect-right-float 1.25s ease-in-out 0.4s infinite alternate both;
+}
+
+@-webkit-keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes shake-horizontal {
